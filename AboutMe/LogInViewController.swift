@@ -17,16 +17,14 @@ final class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-
+    
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        
-        if userNameTextField.text == validUserName, passwordTextField.text == validPassword {
-            showAlert(withTitle: "Молодец", andMessage: "Done")
-        } else {
+        guard userNameTextField.text == validUserName,
+                passwordTextField.text == validPassword else {
             showAlert(withTitle: "Invalid login or password",
                       andMessage: "Please, enter correct login and password")
+            return
         }
     }
     
@@ -52,5 +50,11 @@ final class LogInViewController: UIViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true) 
+    }
+
 }
 
