@@ -13,22 +13,15 @@ final class LogInViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     
     private let validUserName = "User"
-    private let validPassword = "1111"
+    private let validPassword = "11"
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func loginButtonTapped(_ sender: UIButton) {
-      // shouldPerformSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
-    }
-    
-    @IBAction func forgotUserNameButtonTapped(_ sender: UIButton) {
-        showAlert(withTitle: "Oops!", andMessage: "Your name is User 🙃")
-    }
-    
-    @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
-        showAlert(withTitle: "Oops!", andMessage: "Your password is 1111 🙂")
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let welcomeVC = segue.destination as? WelcomeViewController
+        welcomeVC?.welcome = "Welcome, \(userNameTextField.text ?? "")!"
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -37,9 +30,25 @@ final class LogInViewController: UIViewController {
                       andMessage: "Please, enter correct login and password")
             return false
         }
-        
-        // Введенное имя валидно, разрешаем переход
         return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    @IBAction func forgotUserNameButtonTapped() {
+        showAlert(withTitle: "Oops!", andMessage: "Your name is \(validUserName) 🙃")
+    }
+    
+    @IBAction func forgotPasswordButtonTapped() {
+        showAlert(withTitle: "Oops!", andMessage: "Your password is \(validPassword) 🙂")
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userNameTextField.text = ""
+        passwordTextField.text = ""
     }
     
     private func showAlert(withTitle title: String, andMessage message: String) {
@@ -56,13 +65,5 @@ final class LogInViewController: UIViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
-    
-    
-
 }
 

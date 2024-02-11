@@ -9,9 +9,13 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet var welcomeLabel: UILabel!
+    
+    var welcome: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        welcomeLabel.text = welcome
     }
     
 
