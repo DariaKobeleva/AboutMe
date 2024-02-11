@@ -20,12 +20,7 @@ final class LogInViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        guard userNameTextField.text == validUserName,
-                passwordTextField.text == validPassword else {
-            showAlert(withTitle: "Invalid login or password",
-                      andMessage: "Please, enter correct login and password")
-            return
-        }
+      // shouldPerformSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
     }
     
     @IBAction func forgotUserNameButtonTapped(_ sender: UIButton) {
@@ -34,6 +29,17 @@ final class LogInViewController: UIViewController {
     
     @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
         showAlert(withTitle: "Oops!", andMessage: "Your password is 1111 🙂")
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        guard userNameTextField.text == validUserName, passwordTextField.text == validPassword else {
+            showAlert(withTitle: "Invalid login or password",
+                      andMessage: "Please, enter correct login and password")
+            return false
+        }
+        
+        // Введенное имя валидно, разрешаем переход
+        return true
     }
     
     private func showAlert(withTitle title: String, andMessage message: String) {
@@ -53,8 +59,10 @@ final class LogInViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        view.endEditing(true) 
+        view.endEditing(true)
     }
+    
+    
 
 }
 
