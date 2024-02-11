@@ -114,14 +114,22 @@
                                     <segue destination="HVz-ff-BsZ" kind="unwind" unwindAction="unwindFor:" id="lVt-Ag-iik"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxM-gS-Vyb">
+                                <rect key="frame" x="155.66666666666666" y="284" width="82" height="91"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="76"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="reK-hx-dda"/>
                         <color key="backgroundColor" red="0.82741698190000001" green="0.92568219709999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="reK-hx-dda" firstAttribute="bottom" secondItem="DF0-eu-Ps0" secondAttribute="bottom" constant="180" id="4Fg-Wn-8lp"/>
+                            <constraint firstItem="XxM-gS-Vyb" firstAttribute="centerX" secondItem="E3X-Hp-YWR" secondAttribute="centerX" id="4uc-ay-Hte"/>
                             <constraint firstItem="0eg-qA-lYh" firstAttribute="top" secondItem="reK-hx-dda" secondAttribute="top" constant="186" id="Fk6-qb-4Yk"/>
                             <constraint firstItem="0eg-qA-lYh" firstAttribute="centerX" secondItem="E3X-Hp-YWR" secondAttribute="centerX" id="X3x-pv-h3F"/>
                             <constraint firstItem="DF0-eu-Ps0" firstAttribute="centerX" secondItem="E3X-Hp-YWR" secondAttribute="centerX" id="a0z-aL-fmg"/>
+                            <constraint firstItem="XxM-gS-Vyb" firstAttribute="top" secondItem="0eg-qA-lYh" secondAttribute="bottom" constant="43" id="hx5-Jh-XnB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a1O-qD-5zo"/>
