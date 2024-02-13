@@ -12,18 +12,20 @@ final class LogInViewController: UIViewController {
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    private let validUserName = "User"
-    private let validPassword = "11"
+    private let validUserName = "Daria"
+    private let validPassword = "1111"
   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let welcomeVC = segue.destination as? WelcomeViewController
-        welcomeVC?.welcome = "Welcome, \(userNameTextField.text ?? "")!"
+         welcomeVC?.userName = validUserName
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         guard userNameTextField.text == validUserName, passwordTextField.text == validPassword else {
             showAlert(withTitle: "Invalid login or password",
-                      andMessage: "Please, enter correct login and password")
+                      andMessage: "Please, enter correct login and password") {
+                self.passwordTextField.text = ""
+            }
             return false
         }
         return true
@@ -47,15 +49,10 @@ final class LogInViewController: UIViewController {
         passwordTextField.text = ""
     }
     
-    private func showAlert(withTitle title: String, andMessage message: String) {
-        let alert  = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: .alert
-        )
-        
+    private func showAlert(withTitle title: String, andMessage message: String, completion: (() -> Void)? = nil) {
+        let alert  = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.passwordTextField.text = ""
+            completion?()
         }
         
         alert.addAction(okAction)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200FE1EA2B7B94D5006A3AA0 /* PersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200FE1E92B7B94D5006A3AA0 /* PersonalInfo.swift */; };
 		20412FBE2B78EAF000B487A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20412FBD2B78EAF000B487A7 /* AppDelegate.swift */; };
 		20412FC02B78EAF000B487A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20412FBF2B78EAF000B487A7 /* SceneDelegate.swift */; };
 		20412FC22B78EAF000B487A7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20412FC12B78EAF000B487A7 /* LogInViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		200FE1E92B7B94D5006A3AA0 /* PersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfo.swift; sourceTree = "<group>"; };
 		20412FBA2B78EAF000B487A7 /* AboutMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20412FBD2B78EAF000B487A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20412FBF2B78EAF000B487A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		200FE1E62B7B9412006A3AA0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				20412FBD2B78EAF000B487A7 /* AppDelegate.swift */,
+				20412FBF2B78EAF000B487A7 /* SceneDelegate.swift */,
+				20412FCB2B78EAF100B487A7 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		200FE1E72B7B941F006A3AA0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				20412FC12B78EAF000B487A7 /* LogInViewController.swift */,
+				20412FD12B791EB700B487A7 /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		200FE1E82B7B9479006A3AA0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				20412FC32B78EAF000B487A7 /* Main.storyboard */,
+				20412FC82B78EAF100B487A7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		200FE1EB2B7B9505006A3AA0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				200FE1E92B7B94D5006A3AA0 /* PersonalInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		20412FB12B78EAF000B487A7 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +96,11 @@
 		20412FBC2B78EAF000B487A7 /* AboutMe */ = {
 			isa = PBXGroup;
 			children = (
-				20412FBD2B78EAF000B487A7 /* AppDelegate.swift */,
-				20412FBF2B78EAF000B487A7 /* SceneDelegate.swift */,
-				20412FC12B78EAF000B487A7 /* LogInViewController.swift */,
-				20412FD12B791EB700B487A7 /* WelcomeViewController.swift */,
-				20412FC32B78EAF000B487A7 /* Main.storyboard */,
+				200FE1E72B7B941F006A3AA0 /* ViewControllers */,
+				200FE1EB2B7B9505006A3AA0 /* Models */,
+				200FE1E82B7B9479006A3AA0 /* Storyboards */,
+				200FE1E62B7B9412006A3AA0 /* App */,
 				20412FC62B78EAF100B487A7 /* Assets.xcassets */,
-				20412FC82B78EAF100B487A7 /* LaunchScreen.storyboard */,
-				20412FCB2B78EAF100B487A7 /* Info.plist */,
 			);
 			path = AboutMe;
 			sourceTree = "<group>";
@@ -144,6 +179,7 @@
 				20412FC22B78EAF000B487A7 /* LogInViewController.swift in Sources */,
 				20412FD22B791EB700B487A7 /* WelcomeViewController.swift in Sources */,
 				20412FBE2B78EAF000B487A7 /* AppDelegate.swift in Sources */,
+				200FE1EA2B7B94D5006A3AA0 /* PersonalInfo.swift in Sources */,
 				20412FC02B78EAF000B487A7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
