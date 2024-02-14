@@ -7,9 +7,7 @@
 
 import UIKit
 
-class AboutMeViewController: UIViewController {
-
-    
+final class AboutMeViewController: UIViewController {
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var surnameLabel: UILabel!
@@ -17,7 +15,10 @@ class AboutMeViewController: UIViewController {
     @IBOutlet var cityLabel: UILabel!
     @IBOutlet var educationLable: UILabel!
     
-    let user = User.getUser()
+    @IBOutlet var myfotoImage: UIImageView!
+    
+    private let user = User.getUser()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = user.person.name
@@ -26,8 +27,10 @@ class AboutMeViewController: UIViewController {
         cityLabel.text = user.person.city
         educationLable.text = user.person.education
         
+        let height = myfotoImage.frame.size.height
+        let width = myfotoImage.frame.size.width
+        myfotoImage.layer.cornerRadius = min(height, width) / 2
+        myfotoImage.clipsToBounds = true
     }
-    
-
-
 }
+

@@ -12,8 +12,8 @@ final class LogInViewController: UIViewController {
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    private let userName = "Daria"
-    private let validPassword = "11"
+    private let userName = "User"
+    private let validPassword = "1111"
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ final class LogInViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tabBarVC = segue.destination as? UITabBarController
+        let tabBarVC = segue.destination as? TabBarController
         tabBarVC?.viewControllers?.forEach{ viewController in
             let welcomeVC = viewController as? WelcomeViewController
             welcomeVC?.userName = userName
