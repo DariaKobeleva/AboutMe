@@ -33,3 +33,11 @@ struct User {
     }
 }
 
+struct Person {
+    let name: String
+    let surname: String
+    let age: Int
+    let city: String
+    let education: String
+    let bio: String
+}

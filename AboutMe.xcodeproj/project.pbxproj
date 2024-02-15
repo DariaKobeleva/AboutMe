@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		200FE1EA2B7B94D5006A3AA0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200FE1E92B7B94D5006A3AA0 /* Person.swift */; };
 		200FE1ED2B7B9CC9006A3AA0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200FE1EC2B7B9CC9006A3AA0 /* User.swift */; };
 		20412FBE2B78EAF000B487A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20412FBD2B78EAF000B487A7 /* AppDelegate.swift */; };
 		20412FC02B78EAF000B487A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20412FBF2B78EAF000B487A7 /* SceneDelegate.swift */; };
@@ -22,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		200FE1E92B7B94D5006A3AA0 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		200FE1EC2B7B9CC9006A3AA0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		20412FBA2B78EAF000B487A7 /* AboutMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20412FBD2B78EAF000B487A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				200FE1EC2B7B9CC9006A3AA0 /* User.swift */,
-				200FE1E92B7B94D5006A3AA0 /* Person.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,7 +191,6 @@
 				20ABFA242B7BD61600DA9959 /* AboutMeViewController.swift in Sources */,
 				200FE1ED2B7B9CC9006A3AA0 /* User.swift in Sources */,
 				20412FBE2B78EAF000B487A7 /* AppDelegate.swift in Sources */,
-				200FE1EA2B7B94D5006A3AA0 /* Person.swift in Sources */,
 				20412FC02B78EAF000B487A7 /* SceneDelegate.swift in Sources */,
 				20BF31C62B7D2D4C00131FEA /* BioViewController.swift in Sources */,
 			);
