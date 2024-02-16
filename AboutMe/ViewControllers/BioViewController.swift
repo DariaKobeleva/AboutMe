@@ -11,12 +11,11 @@ final class BioViewController: UIViewController {
     
     @IBOutlet var bioTextView: UITextView!
     
-    private let user = User.getUser()
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "\(user.person.fullName)"
         bioTextView.text = user.person.bio
     }
-    
 }

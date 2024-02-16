@@ -17,20 +17,24 @@ final class AboutMeViewController: UIViewController {
     
     @IBOutlet var myfotoImage: UIImageView!
     
-    private let user = User.getUser()
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = user.person.fullName
         nameLabel.text = user.person.name
         surnameLabel.text = user.person.surname
         ageLabel.text = String(user.person.age)
         cityLabel.text = user.person.city
         educationLable.text = user.person.education
-        
-        let height = myfotoImage.frame.size.height
-        let width = myfotoImage.frame.size.width
-        myfotoImage.layer.cornerRadius = min(height, width) / 2
-        myfotoImage.clipsToBounds = true
+
+        myfotoImage.layer.cornerRadius = myfotoImage.frame.height / 2
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       let bioVC = segue.destination as? BioViewController
+        bioVC?.user = user
     }
 }
 
