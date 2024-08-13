@@ -5,7 +5,7 @@
 **AboutMeApp** is an iOS application designed to demonstrate basic user authentication and profile display.
 
 ## Demo
-<img src="[https://github.com/user-attachments/assets/b47c0f74-e9fb-4eb6-9ec8-f9a1df2de31d](https://github.com/user-attachments/assets/ed10a6ea-a14c-4154-ac25-fecdaa9138df)" width="200" />
+<img src="https://github.com/user-attachments/assets/ed10a6ea-a14c-4154-ac25-fecdaa9138df" width="200"/>
 
 
 ## Features
